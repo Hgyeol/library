@@ -33,3 +33,8 @@ def return_book(borrower, title):
     except:
         print("에러")
         return False
+
+
+def get_borrow(borrower):
+    cache.get_all(borrower)
+    return None

@@ -9,3 +9,8 @@ def return_book(borrower, title):
     borrow_key = f"borrower:{borrower}:books"
     redis_client.srem(borrow_key, title)
     print("레디스 성공")
+
+
+def get_all(borrower):
+    borrow_key = f"borrower:{borrower}:books"
+    return redis_client.get(borrow_key)
